@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="js" href="app.js">
+    
+</head>
+<body>
+    <div class="container" id="glowingContainer">
+        <h1> Welcome to the <font color="blue" style="font-family: cursive">Canteen</font> here is our street foods menu.</h1>
+
+    <h2> Prices are shown below. <i>Click Finalize order Button once you're sure with your orders.</i></h2>
+    <ul>
+        <li>Burger - 60 Pesos</li>
+        <li>Fries - 50 pesos</li>
+        <li>Fishbol - 20 pesos</li>
+        <li>Kikiam - 25 pesos</li>
+    </ul>    
+    <button type="button" onclick="addFoodItem()">Add a Food <br> Item</button>
+    <div>
+        <form>
+            <h3>Choice</h3>
+            <select id="foodOptions">
+                <option value="Burger|60">Burger - 60 Pesos</option>
+                <option value="Fries|50">Fries - 50 Pesos</option>
+                <option value="Fishball|20">Fishball - 20 Pesos</option>
+                <option value="Kikiam|25">Kikiam - 25 Pesos</option>
+            </select>
+            <h3>Quantity</h3>
+            <input type="number" id="asd" min="0"><br><br>
+            <button type="button" onclick="finalizeOrder()">Finalize <br>Order</button>
+            <h3>Cash</h3>
+            <input type="number" id="qwe" min="0"><br><br>
+            <button type="button" id="payy" onclick="pay()">Pay!</button>          
+        </form>
+    </div>
+    </form>
+    <div class="setVisibility">
+    </div>
+    <div id="total">
+        <font color="blue" style="font-family: cursive">Total</font>: <span id="totalAmount">0.00 </span> <br>
+        <font color="blue" style="font-family: cursive">Change</font>: <span id="ch"></span>
+    </div>
+    <div class="tablesSection" style="margin-top: 10px; display: none;">
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th> 
+            </tr>
+        </table>
+    </div>
+</div>
+    <script src="app.js"></script>
+    
+</body>
+</html>
